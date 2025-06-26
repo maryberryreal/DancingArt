@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DancingArt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rot: #861120;
+      --hellrot: #fbe4e6;
+      --beige: #f8f4ef;
+      --dunkelgrau: #222;
+      --akzent: #79192f;
+      --radius: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--beige);
+      color: var(--dunkelgrau);
+      line-height: 1.7;
+    }
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--rot);
+    }
+    a { color: var(--rot); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: linear-gradient(to bottom right, #c43b53, #880b0b44), url("img/hero.jpg") center/cover;
+      color: rgb(92, 2, 2);
+      padding: 5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+    }
+    header p {
+      font-size: 1.25rem;
+      opacity: .9;
+    }
+
+    nav {
+      background: white;
+      padding: 1rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    section {
+      padding: 5rem 2rem;
+    }
+    .wrapper {
+      max-width: 1100px;
+      margin: auto;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    @media(min-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+
+    .highlight {
+      background: var(--hellrot);
+      padding: 1rem;
+      border-left: 5px solid var(--rot);
+      border-radius: var(--radius);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform .3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .timeline {
+      position: relative;
+      margin-left: 2rem;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--rot);
+    }
+    .timeline-step {
+      padding-left: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    .timeline-step::before {
+      content: "";
+      position: absolute;
+      left: -12px;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border: 3px solid var(--rot);
+      border-radius: 50%;
+    }
+
+    footer {
+      background: var(--dunkelgrau);
+      color: #eee;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dancing Art - Future Rose  </h1>
+  <p>Ein nachhaltiges Designprojekt inspiriert von Natur, Feminismus und fließender Eleganz</p>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#konzept">Konzept</a></li>
+    <li><a href="#entwurf">Design</a></li>
+    <li><a href="#galerie">Galerie</a></li>
+    <li><a href="#zeitplan">Zeitplan</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section id="konzept">
+    <div class="wrapper grid-2">
+    <div>
+    <h2>„Wo Entwurf zur Mode wird“</h2>
+    <p> Im Rahmen unserer Klausur ging es darum, ein fantasievolles Bühnenoutfit für eine erfundene Künstlerpersönlichkeit zu entwerfen – passend für einen Auftritt beim imaginären <strong>„Festival der Zukunft“</strong>. </p> 
+    <p> Meine Idee entstand aus der Begeisterung für die Natur. Ich habe mich besonders von ihrer Vielfalt und Eleganz inspirieren lassen: von der inspirierender Form bis hin zur geheimnisvollen Struktur von Pilzen. All diese Eindrücke flossen in meine Entwürfe ein. Entstanden sind es Designs, das wie gewachsen wirkten – mit fließenden, organischen Linien, die an Pflanzen erinnern. </p> 
+    <p> Dabei war mir wichtig, nicht nur ein schönes Kleid zu gestalten, sondern auch eine klare Botschaft zu vermitteln: Mode darf auffallen und beeindrucken – aber sie soll dabei auch respektvoll mit unserer Umwelt umgehen. So wurde jedes Detail Teil eines größeren Ganzen, das für Eleganz und Fantasie steht. </p> 
+    <p> Gleichzeitig wollte ich mit dem Outfits die Stärke und Einzigartigkeit der Frau zeigen. Die Figuren aus meine Entwürfe sind keine einzigartigen Personen , doch stehen sie für alle, die sich trauen, anders zu sein. </p>
+    </div>
+    <div>
+      <img src="Entwürfe.JPG" alt="Visualisierung des Design-Kleids" style="max-width:300px; height:auto; border-radius:20px;">
+    </div>
+    </div>
+      <br> 
+  <div class="wrapper grid-2">
+    <div>
+      <h2>Vielfältiges Konzept</h2>
+      <div class="highlight">
+    
+    <p>Mein Designprojekt beschäftigt sich mit der Frage, wie Mode in der Zukunft nicht nur schön, sondern auch verantwortungsvoll gestaltet werden kann. Dabei stehen drei Themen im Mittelpunkt: <strong>Nachhaltigkeit</strong>, <strong>Naturverbundenheit</strong> und <strong>Feminismus</strong>.</p>
+
+    <p>Die erste Inspiration kam aus der <strong>Natur</strong> – besonders von der <strong>Rose</strong>, einem Symbol für Schönheit, Stärke und Verletzlichkeit zugleich. In meinem Design spiegelt sich ihre Form in den geschwungenen Linien und der sanften Struktur wider. Ergänzt wird das Motiv durch das Element <strong>Wasser</strong>, das für Bewegung, Wandel und Leben steht. Die Kombination aus beidem – Blume und Fluss – zieht sich als roter Faden durch mein gesamtes Kunstwerk.</p>
+
+    <h3>♻️ Nachhaltigkeit mit Bedeutung</h3>
+    <p>Für mich beginnt <strong>Nachhaltigkeit</strong> schon beim Material: Ich habe bewusst mit <strong>Stoffresten</strong> gearbeitet – Materialien, die sonst im Müll gelandet wären. Diese neu zu verwerten, war nicht nur eine gestalterische Herausforderung, sondern auch ein klares Statement gegen Wegwerfmode. Mein Ziel war es, zu zeigen, dass recycelte Materialien ebenso wertvoll sein können wie neue – wenn man mit <strong>Kreativität</strong> und <strong>Sorgfalt</strong> arbeitet.</p>
+
+    <h3>🌿 Die Natur als Inspiration</h3>
+    <p>Ich habe versucht, die ästhetische Kraft der <strong>Natur</strong> nicht nur zu imitieren, sondern sie gestalterisch zu fühlen. In den Details meines Designs findet man Formen, die an <strong>Blätter</strong>, <strong>Blüten</strong> oder <strong>Wasserläufe</strong> erinnern. Dabei geht es nicht nur um die Optik – sondern um das <strong>Gefühl</strong>, das Natur auslöst: <strong>Ruhe</strong>, <strong>Kraft</strong> und <strong>Verbindung</strong>.</p>
+
+    <h3>♀️ Feminismus im Design</h3>
+    <p>Ein besonders wichtiger Aspekt war für mich der <strong>feministische</strong> Gedanke: Mein Kleid steht für die <strong>Stärke</strong>, <strong>Freiheit</strong> und <strong>Vielfalt</strong> weiblicher Identitäten. Die dargestellte Figur ist bewusst offen gehalten – sie soll nicht einem Ideal entsprechen, sondern vielen Interpretationen Raum geben. Das Design feiert die <strong>Frau</strong> als kreatives, selbstbestimmtes Wesen, das sich nicht in feste Formen zwängen lässt. <strong>Fließende Linien</strong> statt starrer Silhouetten – für eine Mode, die mitgeht, statt einzuengen.</p>
+    
+    <div>
+      <img src="img/design-mockup.jpg" alt="Visualisierung des Design-Kleids">
+    </div>
+  </div>
+</section>
+
+<section id="entwurf">
+  <div class="wrapper">
+    <h2>Gestaltungsprozess</h2>
+    <div class="grid-2">
+      <div>
+        <h3>Skizzen & Ideen</h3>
+      <p>Zu Beginn entwickelte ich eine Vielzahl an <strong>Skizzen</strong>, die ich in der Klausur angefertigt habe , inspiriert von <strong>Pflanzenformen</strong>, <strong>Strukturen</strong> und <strong>fließenden Wasserlinien</strong>. Da ich von Anfang an eine klare gestalterische Richtung vor Augen hatte, begann ich damit, auf Pinterest eine digitale Pinnwand zu erstellen, um meine Ideen weiter zu sammeln und visuell zu strukturieren.</p>
+      <p>Die Aufregung kam durch die Künstlerin <strong>Giselle Lebedenko</strong>, deren Videos mich völlig inspirierten: der Idee einer <strong>"Dancing Art"</strong>. Dabei handelt es sich um ein Kunstwerk auf Leinwand, das eine Figur zeigt – von Kopf bis Knie –, die ein <strong>eigenes Kleidungsstück</strong> präsentiert. Die Besonderheit: Die Künstlerin kann die Leinwand selbst in der Hand halten und durch Bewegungen der Beine den Eindruck eines <strong>tanzenden Wesens</strong> erzeugen. So sieht man eine beeindruckende Verbindung aus Mode, Bewegung und Performancekunst.</p>
+
+      </div>
+      
+ <div>
+    <img src="GiselleLebedenko.JPG" alt="Inspiration" style="max-width:200px; height:auto; border-radius:20px;">
+    </div>
+
+      <div>
+        <h3>Materialwahl & Ausführung</h3>
+        <p>Alle Materialien bestehen aus <strong>Stoffresten und angesammelte Schmuckstücke</strong> die, ich zufällig Zuhause hatte. Dazu bemalte ich eine Leinwand mit Acrylfarbe und nutzte Krepppapier um Blumen nachzuahmen. Der finale Design ist eine Kombination aus <strong>Malerei und Textildesign</strong> handgenäht auf Leinwand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galerie">
+  <div class="wrapper">
+    <h2>Galerie</h2>
+    <div class="gallery">
+      <img src="1.jpg" alt="Detailaufnahme des Rosenmusters">
+      <img src="2.jpg" alt="Leinwand mit genähtem Stoff">
+    <img src="3.jpg" alt="Entwurfszeichnung auf Papier">
+    <img src="4.jpg" alt="Detailaufnahme des Rosenmusters" style="max-width:200px; height:auto;">
+      <img src="5.jpg" alt="Leinwand mit genähtem Stoff" style="max-width:200px; height:auto;">
+      <img src="6.jpg" alt="Entwurfszeichnung auf Papier">
+    </div>
+  </div>
+</section>
+
+<section id="zeitplan">
+  <div class="wrapper">
+    <h2>Projektzeitplan</h2>
+    <div class="timeline">
+      <div class="timeline-step">
+        <h3>Phase 1: Figur mit Acrylfarbe malen </h3>
+        <p> 
+            Zuerst musste ich lernen mit Acrylfarbe zu arbeiten. Ich versuchte verschiedene Techniken, um die Figur auf der Leinwand zu malen. Dabei war es wichtig, die Proportionen und Details genau zu treffen. Ich experimentierte mit verschiedenen Pinseln und Maltechniken, um die gewünschte Farbe und Wirkung zu erzielen.
+        </p>
+        
+    
+      </div>
+      <div class="timeline-step">
+        <h3>Phase 2: Design der Rosen</h3>
+        <p>
+            Nachdem die Figur fertig war, begann ich mit dem Design der Rosen. Ich entwarf verschiedene Muster und Formen, die ich dann auf die Leinwand übertrug. Dabei achtete ich darauf, dass die Farben harmonisch zur Figur passten und ein stimmiges Gesamtbild ergaben.
+
+        </p>
+      </div>
+      <div class="timeline-step">
+        <h3>Phase 3: Gesamtteil des Kleides entwerfen</h3>
+        <p>
+            Im nächsten Schritt entwarf ich den Gesamtteil des Kleides. Ich kombinierte die gemalten Rosen mit verschiedenen Stoffen und Materialien, um ein einzigartiges Design zu schaffen. Dabei achtete ich darauf, dass die Farben und Muster gut miteinander harmonierten und das Kleid eine fließende, elegante Form erhielt.
+        </p>
+      </div>
+      <div class="timeline-step">
+        <h3>Phase 4: Accessoires und Details</h3>
+        <p>
+            Zum Schluss fügte ich dem Kleid verschiedene Accessoires und Details hinzu. Ich nutzte <strong>Schmuckstücke</strong> und <strong>Stoffreste</strong>, um dem Design eine besondere Note zu verleihen. Dabei achtete ich darauf, dass die Accessoires das Gesamtbild nicht überladen.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="kontakt">
+  <p>© 2025 | Semesterarbeit von Marilena | Kunst Leistungskurs</p>
+  <p><a href="#">Nach oben ↑</a></p>
+</footer>
+
+</body>
+</html>
